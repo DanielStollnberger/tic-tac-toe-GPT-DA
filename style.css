@@ -10,8 +10,10 @@
     font-size: 24px;
     cursor: pointer;
 }
+
 body {
-    background-color: #C2B078; /* Altes Beige aus Ägypten */
+    background-color: #C2B078;
+    /* Altes Beige aus Ägypten */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,15 +25,17 @@ body {
 
 .tic-tac-toe {
     border-collapse: collapse;
+    position: relative;
 }
 
 .cell {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     text-align: center;
     font-size: 24px;
     cursor: pointer;
-    border: 2px solid #B29700; /* Altes Gold */
+    border: 2px solid #4f4300;
+    /* Altes Gold */
 }
 
 /* Entfernt die äußeren Linien */
@@ -47,4 +51,101 @@ tr:first-child .cell {
 
 tr:last-child .cell {
     border-bottom: none;
+}
+
+.character {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 3px white);
+}
+
+td:hover {
+    background-color: #4f43002e;
+}
+
+.container {
+    z-index: 110;
+    position: relative;
+}
+
+.winner {
+    position: absolute;
+    height: 60vh;
+    width: 50%;
+    border-radius: 20px;
+    border: 4px solid #4f4300;
+    background-color: #C2B078;
+    filter: drop-shadow(0 0 70px white);
+    color: #4f4300;
+    text-align: center;
+    z-index: 100;
+    padding: 0 10px;
+}
+
+p {
+    font-size: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+.circle {
+    color: #67809F;
+}
+
+.cross {
+    color: #8B0000;
+}
+
+button{
+    border-radius: 5px;
+  border: 2px solid #4f4300;
+  cursor: pointer;
+}
+
+button:hover{
+    background-color: #4f4300;
+    color: antiquewhite;
+}
+
+.bg-white{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.circle-button {
+    background-color: #67809F;
+}
+
+.cross-button {
+    background-color: #8B0000;
+    color: antiquewhite;
+}
+
+.winner-line{
+    position: absolute;
+    height: 2px;
+    width: 250px;
+    background-color: aliceblue;
+}
+
+@media(max-width: 600px) {
+
+    h2{
+        font-size: 20px;
+    }
+p{
+    font-size: 16px;
+}
+.winner{
+    height: auto;
+    width: 65%;
+    top: 20px;
+    padding: 10px !important;
+}
+
 }

@@ -9,7 +9,31 @@
 </head>
 <body onload="init()">
     <h1>TIC-TAC-TOE</h1>
-    <div id="container">
+    <div class="character">
+        <svg width="60" height="60" viewBox="0 0 100 100" id="circle-svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#67809F" stroke-width="6"
+                stroke-dasharray="251.2" stroke-dashoffset="251.2"
+                transform="rotate(-90 50 50)">
+                <animate attributeName="stroke-dashoffset" from="251.2" to="0" dur="1s" fill="freeze"/>
+            </circle>
+        </svg>
+        <svg width="70" height="70" viewBox="0 0 100 100" id="cross-svg">
+            <!-- Linie von oben links nach unten rechts -->
+            <line x1="20" y1="20" x2="80" y2="80" stroke="#8B0000" stroke-width="6" stroke-dasharray="84.85" stroke-dashoffset="84.85">
+                <animate attributeName="stroke-dashoffset" from="84.85" to="0" dur="1s" fill="freeze"/>
+            </line>
+            
+            <!-- Linie von oben rechts nach unten links -->
+            <line x1="80" y1="20" x2="20" y2="80" stroke="#8B0000" stroke-width="6" stroke-dasharray="84.85" stroke-dashoffset="84.85">
+                <animate attributeName="stroke-dashoffset" from="84.85" to="0" dur="1s" fill="freeze"/>
+            </line>
+        </svg>
+    </div>
+    <div id="container" class="container">
+       
+    </div>
+    
+    <div id="winner" class="winner hidden">
 
     </div>
 </body>
